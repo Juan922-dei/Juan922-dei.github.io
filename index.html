@@ -1,343 +1,306 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INSTITUTO INTECSIS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --verde-oscuro: #006400;
-      --verde: #00a651;
-      --verde-claro: #00e676;
-      --verde-suave: #e0f2f1;
-      --fondo-oscuro: #121212;
-      --texto-claro: #f5f5f5;
-      --card-oscuro: #1e1e1e;
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--verde-suave);
-      color: #333;
-      scroll-behavior: smooth;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      background-color: var(--fondo-oscuro);
-      color: var(--texto-claro);
-    }
-    header {
-      background-color: var(--verde);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    header img {
-      height: 70px;
-    }
-    header span {
-      font-size: 32px;
-      font-weight: bold;
-    }
-    nav {
-      background-color: var(--verde-oscuro);
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      color: var(--verde-claro);
-      text-decoration: underline;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    section {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      margin-bottom: 40px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    body.dark-mode section {
-      background: var(--card-oscuro);
-    }
-    h2 {
-      color: var(--verde);
-      border-bottom: 2px solid var(--verde-claro);
-      padding-bottom: 10px;
-    }
-    h3 {
-      color: var(--verde);
-    }
-    ul, ol {
-      padding-left: 20px;
-    }
-    .galeria-imagenes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .galeria-imagenes a {
-      display: block;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-    .galeria-imagenes img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-    .galeria-imagenes a:hover {
-      transform: scale(1.08);
-    }
-    footer {
-      background-color: var(--verde);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    .semestre {
-      margin-bottom: 20px;
-    }
-    .semestre h3 {
-      margin-bottom: 10px;
-    }
-    .modo-oscuro-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--verde);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
-    }
-    .modo-oscuro-toggle:hover {
-      background-color: var(--verde-claro);
-      color: #000000;
-    }
-    .titulo {
-  font-family: 'algerian', sans-serif;
-}
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-</head>
-<body>
-  <header>
-    <img src="https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000003-ea42fea431/450/descarga%20%285%29.webp?ph=2c70583554">
-    <h1 class="titulo">INSTITUTO INTECSIS</h1>
-  </header>
-  <nav>
-    <a href="#quienes-somos">Quiénes somos</a>
-    <a href="#nuestro-tecnico">Nuestro Técnico</a>
-    <a href="#materias">Materias</a>
-    <a href="#docentes">Docentes</a>
-    <a href="#galeria">Galería</a>
-    <a href="#matricula">Matrícula</a>
-  </nav>
-  <main>
-    <section id="quienes-somos">
-      <h2>Quiénes somos</h2>
-      <p>Bienvenidos a Intecsis, un instituto comprometido con la formación técnica de calidad en el área de sistemas y tecnologías de la información. Nuestro objetivo es brindar a los estudiantes las herramientas y conocimientos necesarios para enfrentar con éxito los desafíos del mundo digital actual. En Intecsis, combinamos teoría y práctica en un ambiente educativo dinámico, con instructores capacitados y programas actualizados, orientados al desarrollo profesional y personal de nuestros alumnos.</p>
-    </section>
-    <section id="nuestro-tecnico">
-      <h2>Nuestro Técnico</h2>
-      <p>Nuestro Técnico en Sistemas y Soporte de las Tecnologías es una carrera enfocada en la formación de profesionales capaces de instalar, configurar, mantener y dar soporte a equipos informáticos, redes y sistemas operativos. Los estudiantes desarrollan competencias tanto en hardware como en software, incluyendo conocimientos en reparación de computadoras, administración de redes, seguridad informática y soporte técnico. Este programa combina teoría y práctica para preparar técnicos que puedan integrarse al entorno laboral o continuar con estudios superiores en el área de la tecnología.</p>
-    </section>
-    <section id="materias">
-      <h2>Materias por Semestre</h2>
-      <div class="semestre">
-        <h3>Primer Semestre</h3>
-        <ul>
-          <li>Introducción a los sistemas</li>
-          <li>Mecanografia</li>
-          <li>Sistemas operativos</li>
-          <li>Word</li>
-          <li>Power point</li>
-          <li>Exel</li>
-        </ul>
-      </div>
-      <div class="semestre">
-        <h3>Segundo Semestre</h3>
-        <ul>
-          <li>Graficadores, Photoshop,publisher<li>
-          <li>Corel Draw</li>
-          <li>Exel #2 Contabilidad</li>
-          <li>Access, Office y Bases de datos</li>
-          <li>Internet y navegadores</li>
-          <li>Redes</li>
-        </ul>
-      </div>
-      <div class="semestre">
-        <h3>Tercer Semestre</h3>
-        <ul>
-          <li>Analisis y diseño de software</li>
-          <li>access #2</li>
-          <li>Logica matematica</li>
-          <li>Diseño web</li>
-          <li>Diseño de pagina web</li>
-        </ul>
-      </div>
-      <div class="semestre">
-        <h3>Cuarto Semestre</h3>
-        <ul>
-          <li>Mantenimiento de equipos</li>
-          <li>Mantenimiento de equipos #2</li>
-          <li>Algoritmos de programacion</li>
-          <li>Programacion visual basic</li>
-          <li>TEO proyecto-tesis</li>
-        </ul>
-      </div>
-    </section>
-    <section id="docentes">
-      <h2>Docentes</h2>
-      <p>Sebastian Tamallo, Julian Quiroga</p>
-    </section>
-    <section id="galeria">
-      <h2>Galería de Actividades</h2>
-      <div class="galeria-imagenes">
-        <a href="actividad1.jpg" data-lightbox="galeria" data-title="Actividad recreativa 1">
-          <img src="https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000053-af06baf06e/WhatsApp%20Image%202024-06-15%20at%201.09.06%20PM.webp?ph=2c70583554" alt="Actividad recreativa 1">
-        </a>
-        <a href="actividad2.jpg" data-lightbox="galeria" data-title="Actividad recreativa 2">
-          <img src="https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000057-05dbd05dbf/WhatsApp%20Image%202024-06-15%20at%201.09.06%20PM%20%282%29.webp?ph=2c70583554" alt="Actividad recreativa 2">
-        </a>
-        <a href="actividad3.jpg" data-lightbox="galeria" data-title="Actividad recreativa 3">
-          <img src="https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000063-5bd065bd08/WhatsApp%20Image%202024-06-15%20at%201.09.07%20PM%20%282%29.webp?ph=2c70583554" alt="Actividad recreativa 3">
-        </a>
-        <a href="actividad4.jpg" data-lightbox="galeria" data-title="Actividad recreativa 4">
-          <img src="https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000067-46bf846bfa/WhatsApp%20Image%202024-06-15%20at%201.09.04%20PM.webp?ph=2c70583554" alt="Actividad recreativa 4">
-        </a>
-        <a href="actividad5.jpg" data-lightbox="galeria" data-title="Actividad recreativa 5">
-          <img src=" https://2c70583554.cbaul-cdnwnd.com/0f7bea199ba3ddbce5ec75eaa1c12250/200000059-dbddadbddd/WhatsApp%20Image%202024-06-15%20at%201.09.07%20PM.webp?ph=2c70583554"alt="Actividad recreativa 5">
-        </a>
-        <a href="actividad5.jpg" data-lightbox="galeria" data-title="Actividad recreativa 6">
-          <img src="https://www.facebook.com/photo/?fbid=122201958512105199&set=pb.61553155987353.-2207520000">
-        </a>
-        <a href="actividad5.jpg" data-lightbox="galeria" data-title="Actividad recreativa 7">
-          <img src="https://www.facebook.com/photo.php?fbid=122174999630105199&set=pb.61553155987353.-2207520000&type=3">
-        </a>
-        <a href="actividad5.jpg" data-lightbox="galeria" data-title="Actividad recreativa 8">
-          <img src="https://www.facebook.com/photo.php?fbid=122169164720105199&set=pb.61553155987353.-2207520000&type=3">
-        </a>
-        <a href="actividad5.jpg" data-lightbox="galeria" data-title="Actividad recreativa 9">
-          <img src="https://www.facebook.com/photo.php?fbid=122103683630105199&set=pb.61553155987353.-2207520000&type=3">
-        </a>
-       
-      </div>
-    </section>
-    <section id="matricula">
-      <h2>Matrícula</h2>
-      <h3>Pasos para la Matrícula</h3>
-      <ol>
-        <li>Llenar el formulario de inscripción</li>
-        <li>Presentar copia de cédula y título de bachiller</li>
-        <li>Cancelar el valor de la matrícula</li>
-        <li>Esperar confirmación por parte del instituto</li>
-      </ol>
-      <h3>Requisitos</h3>
-      <ul>
-        <li>Formulario de inscripción completo</li>
-        <li>Copia de cédula de identidad</li>
-        <li>Título de bachiller o acta de grado</li>
-        <li>Una foto tamaño carné</li>
-        <li>Comprobante de pago de matrícula</li>
-      </ul>
-     <section id="contacto" style="padding: 2em; background-color: #388828;">
-  <div style="max-width: 600px; margin: auto; background: white; padding: 2em; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <h2 style="text-align: center; color: hsl(123, 46%, 34%); margin-bottom: 1em;">Formulario de Contacto</h2>
-    <form action="https://formsubmit.co/d98792d807689346edeb45bf9ec26314 method="POST">
-      <label for="nombre" style="color: #388e3c; font-weight: bold;">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required
-             style="width: 100%; padding: 0.75em; margin-bottom: 1em; border: 1px solid #c8e6c9; border-radius: 8px; background: #f9fff9;">
+<!Option Explicit
 
-      <label for="email" style="color: #388e3c; font-weight: bold;">Correo electrónico</label>
-      <input type="email" id="email" name="email" required
-             style="width: 100%; padding: 0.75em; margin-bottom: 1em; border: 1px solid #c8e6c9; border-radius: 8px; background: #f9fff9;">
+' ====================== VARIABLES GLOBALES ======================
+Const VERSION_APP As String = "1.0"
+Dim wsInicio As Worksheet, wsEmpresa As Worksheet
+Dim ws9001 As Worksheet, ws45001 As Worksheet, ws14001 As Worksheet, ws27001 As Worksheet
+Dim wsResultados As Worksheet, wsConfig As Worksheet
 
-      <label for="asunto" style="color: #388e3c; font-weight: bold;">Asunto</label>
-      <input type="text" id="asunto" name="asunto" required
-             style="width: 100%; padding: 0.75em; margin-bottom: 1em; border: 1px solid #c8e6c9; border-radius: 8px; background: #f9fff9;">
-
-      <label for="mensaje" style="color: #388e3c; font-weight: bold;">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required
-                style="width: 100%; padding: 0.75em; margin-bottom: 1em; border: 1px solid #c8e6c9; border-radius: 8px; background: #f9fff9; resize: vertical; min-height: 100px;"></textarea>
-
-      <button type="submit"
-              style="background-color: #388e3c; color: rgb(255, 255, 255); padding: 0.75em 1.5em; border: none; border-radius: 8px; font-size: 1rem; width: 100%; cursor: pointer; transition: background 0.3s;">
-        Enviar mensaje
-      </button>
-    </form>
-  </div>
-</section>
+' ====================== INICIO DE LA APLICACIÓN ======================
+Sub IniciarApp()
+    On Error GoTo ErrorHandler
     
-    </script>
-    <p>&copy; 2025 INSTECSIS.EDU</p>
-  </footer>
-  <button class="modo-oscuro-toggle" onclick="document.body.classList.toggle('dark-mode'); localStorage.setItem('modoOscuro', document.body.classList.contains('dark-mode'))">Modo oscuro</button>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-    // Restaurar preferencia de modo oscuro
-    if (localStorage.getItem('modoOscuro') === 'true') {
-      document.body.classList.add('dark-mode');
-    }
+    ' Asignar hojas
+    Set wsInicio = ThisWorkbook.Sheets("Inicio")
+    Set wsEmpresa = ThisWorkbook.Sheets("DatosEmpresa")
+    Set ws9001 = ThisWorkbook.Sheets("ISO9001")
+    Set ws45001 = ThisWorkbook.Sheets("ISO45001")
+    Set ws14001 = ThisWorkbook.Sheets("ISO14001")
+    Set ws27001 = ThisWorkbook.Sheets("ISO27001")
+    Set wsResultados = ThisWorkbook.Sheets("Resultados")
+    Set wsConfig = ThisWorkbook.Sheets("Configuracion")
+    
+    ' Mostrar menú principal
+    wsInicio.Activate
+    MsgBox "✅ Aplicación de Evaluación de Normas ISO — Versión " & VERSION_APP & vbCrLf & _
+           "Desarrollada en Excel con VBA", vbInformation, "Bienvenido"
+    Exit Sub
+    
+ErrorHandler:
+    MsgBox "❌ Error al iniciar: " & Err.Description, vbCritical
+End Sub
 
-    // Botón de scroll al principio
-    const scrollTopBtn = document.createElement('button');
-    scrollTopBtn.textContent = '↑';
-    scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
-    scrollTopBtn.style.position = 'fixed';
-    scrollTopBtn.style.bottom = '80px';
-    scrollTopBtn.style.right = '20px';
-    scrollTopBtn.style.padding = '10px 15px';
-    scrollTopBtn.style.borderRadius = '8px';
-    scrollTopBtn.style.border = 'none';
-    scrollTopBtn.style.backgroundColor = 'var(--verde)';
-    scrollTopBtn.style.color = 'white';
-    scrollTopBtn.style.cursor = 'pointer';
-    scrollTopBtn.style.fontSize = '18px';
-    scrollTopBtn.style.display = 'none';
-    scrollTopBtn.style.zIndex = '1001';
-    scrollTopBtn.style.transition = 'opacity 0.3s';
-    document.body.appendChild(scrollTopBtn);
+' ====================== MENÚ: REGISTRAR EMPRESA ======================
+Sub AbrirRegistroEmpresa()
+    wsEmpresa.Activate
+    Range("A1").Select
+    MsgBox "📝 Completa los datos de la empresa en esta hoja:" & vbCrLf & _
+           "• Celda B2: Razón Social" & vbCrLf & _
+           "• Celda B3: NIT" & vbCrLf & _
+           "• Celda B4: Teléfono" & vbCrLf & _
+           "• Celda B5: Correo Electrónico" & vbCrLf & _
+           "• Celda B6: Dirección", vbInformation, "Registro de Empresa"
+End Sub
 
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
+' ====================== MENÚ: SELECCIONAR NORMA ======================
+Sub AbrirISO9001()
+    ws9001.Activate
+    InicializarListaChequeo ws9001, "ISO 9001:2015 — Sistema de Gestión de Calidad"
+End Sub
 
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-  <footer class="bg-green-600 text-white py-4">
-   <div class="container mx-auto text-center">
-</body>
-</html>
+Sub AbrirISO45001()
+    ws45001.Activate
+    InicializarListaChequeo ws45001, "ISO 45001:2018 — Sistema de Gestión de Seguridad y Salud en el Trabajo"
+End Sub
+
+Sub AbrirISO14001()
+    ws14001.Activate
+    InicializarListaChequeo ws14001, "ISO 14001:2015 — Sistema de Gestión Ambiental"
+End Sub
+
+Sub AbrirISO27001()
+    ws27001.Activate
+    InicializarListaChequeo ws27001, "ISO 27001:2022 — Sistema de Gestión de Seguridad de la Información"
+End Sub
+
+' ====================== INICIALIZAR LISTA DE CHEQUEO ======================
+Sub InicializarListaChequeo(ws As Worksheet, Titulo As String)
+    On Error Resume Next
+    ws.Range("A1").Value = Titulo
+    ws.Range("A1").Font.Size = 14
+    ws.Range("A1").Font.Bold = True
+    
+    ' Encabezados de tabla
+    ws.Range("A3") = "Item"
+    ws.Range("B3") = "Requisito / Parámetro"
+    ws.Range("C3") = "Cumple ✅"
+    ws.Range("D3") = "No Cumple ❌"
+    ws.Range("E3") = "No Aplica ⚠️"
+    ws.Range("F3") = "Observaciones"
+    
+    ws.Range("A3:F3").Font.Bold = True
+    ws.Columns("F:F").ColumnWidth = 35
+    ws.Columns("B:B").ColumnWidth = 50
+    
+    ' Llenar requisitos según norma
+    Select Case ws.Name
+        Case "ISO9001": LlenarRequisitos9001 ws
+        Case "ISO45001": LlenarRequisitos45001 ws
+        Case "ISO14001": LlenarRequisitos14001 ws
+        Case "ISO27001": LlenarRequisitos27001 ws
+    End Select
+    
+    MsgBox "✅ Lista de chequeo cargada. Marca con X en la columna correspondiente y agrega observaciones.", vbInformation
+End Sub
+
+' ====================== CARGA DE REQUISITOS POR NORMA ======================
+Sub LlenarRequisitos9001(ws As Worksheet)
+    Dim fila As Integer: fila = 4
+    Dim reqs As Variant, i As Integer
+    
+    reqs = Array( _
+        "4.1 Comprensión de la organización y su contexto", _
+        "4.2 Comprensión de las necesidades y expectativas de las partes interesadas", _
+        "5.1 Liderazgo y compromiso", _
+        "5.2 Política de la calidad", _
+        "6.1 Acciones para abordar riesgos y oportunidades", _
+        "7.1 Recursos (personal, infraestructura, ambiente)", _
+        "8.1 Planificación y control operacional", _
+        "9.1 Seguimiento, medición, análisis y evaluación", _
+        "10.1 Mejora general")
+    
+    For i = LBound(reqs) To UBound(reqs)
+        ws.Cells(fila, 1) = i + 1
+        ws.Cells(fila, 2) = reqs(i)
+        fila = fila + 1
+    Next i
+End Sub
+
+Sub LlenarRequisitos45001(ws As Worksheet)
+    Dim fila As Integer: fila = 4
+    Dim reqs As Variant, i As Integer
+    
+    reqs = Array( _
+        "4.1 Comprensión de la organización y su contexto", _
+        "5.2 Política de SST", _
+        "6.1 Identificación de peligros y evaluación de riesgos", _
+        "7.2 Competencia del personal", _
+        "7.3 Toma de conciencia", _
+        "8.1 Planificación y control operacional", _
+        "9.1 Seguimiento y medición del desempeño", _
+        "10.1 Investigación de incidentes y mejora")
+    
+    For i = LBound(reqs) To UBound(reqs)
+        ws.Cells(fila, 1) = i + 1
+        ws.Cells(fila, 2) = reqs(i)
+        fila = fila + 1
+    Next i
+End Sub
+
+Sub LlenarRequisitos14001(ws As Worksheet)
+    Dim fila As Integer: fila = 4
+    Dim reqs As Variant, i As Integer
+    
+    reqs = Array( _
+        "4.1 Comprensión del contexto de la organización", _
+        "5.2 Política ambiental", _
+        "6.1 Acciones para abordar riesgos y oportunidades ambientales", _
+        "6.2 Objetivos ambientales y planificación para lograrlos", _
+        "7.1 Recursos", _
+        "8.1 Planificación y control operacional", _
+        "9.1 Seguimiento, medición, análisis y evaluación del desempeño ambiental", _
+        "10.1 Mejora continua")
+    
+    For i = LBound(reqs) To UBound(reqs)
+        ws.Cells(fila, 1) = i + 1
+        ws.Cells(fila, 2) = reqs(i)
+        fila = fila + 1
+    Next i
+End Sub
+
+Sub LlenarRequisitos27001(ws As Worksheet)
+    Dim fila As Integer: fila = 4
+    Dim reqs As Variant, i As Integer
+    
+    reqs = Array( _
+        "4.4 Sistema de gestión de la seguridad de la información", _
+        "5.2 Política de seguridad de la información", _
+        "6.1 Acciones para gestionar riesgos de seguridad de la información", _
+        "8.1 Operaciones — Gestión de riesgos de seguridad de la información", _
+        "8.2 Controles de seguridad de la información", _
+        "9.1 Seguimiento, medición, análisis y evaluación del desempeño", _
+        "10.1 Mejora continua")
+    
+    For i = LBound(reqs) To UBound(reqs)
+        ws.Cells(fila, 1) = i + 1
+        ws.Cells(fila, 2) = reqs(i)
+        fila = fila + 1
+    Next i
+End Sub
+
+' ====================== CALCULAR PORCENTAJE DE CUMPLIMIENTO ======================
+Function CalcularCumplimiento(ws As Worksheet) As Double
+    Dim ultimaFila As Long, fila As Long
+    Dim total As Long, cumple As Long
+    
+    ultimaFila = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
+    
+    For fila = 4 To ultimaFila
+        If Trim(ws.Cells(fila, "C").Value) = "X" Then
+            cumple = cumple + 1
+        End If
+        If Trim(ws.Cells(fila, "C").Value) <> "" Or _
+           Trim(ws.Cells(fila, "D").Value) <> "" Or _
+           Trim(ws.Cells(fila, "E").Value) <> "" Then
+            total = total + 1
+        End If
+    Next fila
+    
+    If total > 0 Then
+        CalcularCumplimiento = Round((cumple / total) * 100, 2)
+    Else
+        CalcularCumplimiento = 0
+    End If
+End Function
+
+' ====================== MOSTRAR RESULTADOS Y GRÁFICOS ======================
+Sub VerResultados()
+    wsResultados.Activate
+    Cells.Clear
+    
+    ' Encabezado
+    Range("A1") = "📊 RESUMEN DE CUMPLIMIENTO POR NORMA ISO"
+    Range("A1").Font.Size = 14: Range("A1").Font.Bold = True
+    
+    ' Datos de la empresa
+    Range("A3") = "Evaluado a: " & wsEmpresa.Range("B2")
+    Range("A4") = "NIT: " & wsEmpresa.Range("B3")
+    Range("A5") = "Fecha de evaluación: " & Format(Date, "dd/mm/yyyy")
+    
+    ' Encabezado tabla
+    Range("A7") = "Norma ISO": Range("B7") = "Cumplimiento %": Range("C7") = "Estado"
+    Range("A7:C7").Font.Bold = True
+    
+    ' Cálculos
+    Dim p9001 As Double, p45001 As Double, p14001 As Double, p27001 As Double
+    p9001 = CalcularCumplimiento(ws9001)
+    p45001 = CalcularCumplimiento(ws45001)
+    p14001 = CalcularCumplimiento(ws14001)
+    p27001 = CalcularCumplimiento(ws27001)
+    
+    ' Llenar tabla
+    Dim fila As Integer: fila = 8
+    Cells(fila, 1) = "ISO 9001:2015": Cells(fila, 2) = p9001 & "%": Cells(fila, 3) = EstadoKPI(p9001): fila = fila + 1
+    Cells(fila, 1) = "ISO 45001:2018": Cells(fila, 2) = p45001 & "%": Cells(fila, 3) = EstadoKPI(p45001): fila = fila + 1
+    Cells(fila, 1) = "ISO 14001:2015": Cells(fila, 2) = p14001 & "%": Cells(fila, 3) = EstadoKPI(p14001): fila = fila + 1
+    Cells(fila, 1) = "ISO 27001:2022": Cells(fila, 2) = p27001 & "%": Cells(fila, 3) = EstadoKPI(p27001)
+    
+    ' Crear gráfico
+    CrearGrafico p9001, p45001, p14001, p27001
+    
+    MsgBox "✅ Resultados calculados y gráfico generado", vbInformation
+End Sub
+
+Function EstadoKPI(pct As Double) As String
+    Select Case pct
+        Case Is >= 80: EstadoKPI = "🟢 ADECUADO"
+        Case Is >= 60: EstadoKPI = "🟡 EN PROCESO"
+        Case Else: EstadoKPI = "🔴 DEFICIENTE"
+    End Select
+End Function
+
+Sub CrearGrafico(p9001 As Double, p45001 As Double, p14001 As Double, p27001 As Double)
+    Dim grafico As ChartObject
+    Dim nombres As Variant, valores As Variant
+    
+    ' Eliminar gráfico anterior
+    For Each grafico In wsResultados.ChartObjects
+        grafico.Delete
+    Next
+    
+    nombres = Array("ISO 9001", "ISO 45001", "ISO 14001", "ISO 27001")
+    valores = Array(p9001, p45001, p14001, p27001)
+    
+    ' Crear gráfico de columnas
+    Set grafico = wsResultados.ChartObjects.Add(Left:=100, Width:=500, Top:=200, Height:=300)
+    With grafico.Chart
+        .ChartType = xlColumnClustered
+        .SetSourceData Source:=wsResultados.Range("A8:A11,B8:B11")
+        .HasTitle = True
+        .ChartTitle.Text = "Porcentaje de Cumplimiento por Norma ISO"
+        .Axes(xlCategory, xlPrimary).HasTitle = True
+        .Axes(xlCategory, xlPrimary).AxisTitle.Text = "Normas Evaluadas"
+        .Axes(xlValue, xlPrimary).HasTitle = True
+        .Axes(xlValue, xlPrimary).AxisTitle.Text = "% Cumplimiento"
+        .Axes(xlValue).MinimumScale = 0
+        .Axes(xlValue).MaximumScale = 100
+    End With
+End Sub
+
+' ====================== EXPORTAR A PDF ======================
+Sub ExportarPDF()
+    On Error GoTo ErrorPDF
+    
+    Dim ruta As String
+    ruta = ThisWorkbook.Path & "\Informe_Evaluacion_ISO_" & Format(Date, "yyyymmdd") & ".pdf"
+    
+    ' Exportar hoja de resultados como PDF
+    wsResultados.ExportAsFixedFormat _
+        Type:=xlTypePDF, _
+        Filename:=ruta, _
+        Quality:=xlQualityStandard, _
+        IncludeDocProperties:=True, _
+        IgnorePrintAreas:=False
+    
+    MsgBox "✅ Informe PDF generado en: " & vbCrLf & ruta, vbInformation
+    Exit Sub
+    
+ErrorPDF:
+    MsgBox "⚠️ No se pudo generar el PDF. Verifica que tengas permisos de escritura en la carpeta.", vbExclamation
+End Sub
+
+' ====================== REGRESAR AL MENÚ PRINCIPAL ======================
+Sub VolverInicio()
+    wsInicio.Activate
+End Sub
+    
